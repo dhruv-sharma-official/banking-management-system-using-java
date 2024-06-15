@@ -23,27 +23,27 @@ public class main{
 				long amount = scanner.nextLong();
 				if (amount <= per.accountbal) {
 					per.accountbal = per.accountbal - amount;
+
+					for (customer per2 : customers) {
+						boolean tofound = false;
+						if (per2.getAccno() == tto){
+							tofound = true;
+						}
+						if (tofound){
+							per2.accountbal = per2.accountbal + amount;
+						} else {
+							System.out.println("reciever's account not found");
+						}
+					}
+
+
+
 				} else {
 					System.out.println("Insufficient funds");
 				}
 				
 			} else {
 				System.out.println("sender's account not found");
-			}
-		}
-//////////////////////////////////////////////////////////////////////
-		for (customer per : customers) {
-			boolean tofound = false;
-			if (per.getAccno() == tto){
-				tofound = true;
-			}
-			if (tofound){
-				System.out.println("\nAccount balance: " + per.getAccbal()+"\n");
-				System.out.println("Enter Amount: ");
-				long amount = scanner.nextLong();
-				per.accountbal = per.accountbal + amount;
-			} else {
-				System.out.println("reciever's account not found");
 			}
 		}
 
