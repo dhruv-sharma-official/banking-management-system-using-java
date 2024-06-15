@@ -202,7 +202,7 @@ public class BankManagement {
 
 	public static void disdetailsAcc(Scanner scanner, ArrayList<customer> customers) {
 		System.out.println("Enter the Account Number: ");
-		long ano = scanner.nextInt();
+		long ano = scanner.nextLong();
 		for (customer per : customers) {
 			boolean found = false;
 			if (per.getAccno() == ano) {
@@ -323,9 +323,10 @@ public class BankManagement {
 							addAccount(scanner, customers);
 							break;
 						case 3:
-							continue;
-						default:
 							System.out.println("this feature will be introduced soon");
+							break;
+						default:
+							System.out.println("invalid input");
 					}
 					break;
 
