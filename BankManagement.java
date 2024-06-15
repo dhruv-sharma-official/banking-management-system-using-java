@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 
 
-public class main{ 
+public class BankManagement{ 
 
 	public static void transferMoney(Scanner scanner, ArrayList<customer> customers){
 		System.out.println("Transfer from Account no: ");
