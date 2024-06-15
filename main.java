@@ -158,10 +158,10 @@ public class main{
 
 	public static void disdetailsCont(Scanner scanner, ArrayList<customer> customers){
 		System.out.println("Enter the Contact Number: ");
-		long cno = scanner.nextInt();
+		long cno = scanner.nextLong();
 		for (customer per : customers) {
 			boolean found = false;
-			if (per.getcont() == cno){
+			if (per.number == cno){
 				found = true;
 			}
 			if (found){
